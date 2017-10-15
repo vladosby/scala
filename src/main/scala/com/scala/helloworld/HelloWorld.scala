@@ -27,6 +27,19 @@ object HelloWorld {
 
     val greeter: Greeter = new Greeter("Hello", "Scala")
     greeter.hello()
+
+    val point1 = Point(1, 2)
+    val point2 = Point(2, 2)
+    val point3 = Point(2, 2)
+
+    if (point1 != point2) {
+      println("Point(1, 2) !=  Point(2, 2)")
+    }
+
+    if (point2 == point3) {
+      println("Point(2, 2) ==  Point(2, 2)")
+    }
+
   }
 
   def addExt(x: Int, y: Int): Int = x + y
