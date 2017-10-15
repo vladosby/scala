@@ -25,6 +25,8 @@ object HelloWorld {
 
     println(addExt(1, 2))
 
+    val greeter: Greeter = new Greeter("Hello", "Scala")
+    greeter.hello()
   }
 
   def addExt(x: Int, y: Int): Int = x + y
