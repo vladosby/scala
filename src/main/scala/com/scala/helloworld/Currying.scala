@@ -10,6 +10,9 @@ object Currying {
     println(twoPlus(7))
 
     printSum(onePlus)
+
+    val threePlus: Int => Int = sum(3)
+    printSum(threePlus)
   }
 
   def sum(x: Int)(y: Int) = x + y
