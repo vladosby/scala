@@ -14,6 +14,9 @@ object Implicits {
     println(sorted2)
 
     println(10 print (_ + 5))
+
+    println(TypeConstraint("1234").getLength)
+//    TypeConstraint(111).getLength runtime error
   }
 
   implicit class IntPrint(x: Int) {
@@ -42,6 +45,10 @@ case class CustomList[T](list: List[T]) {
   def sort2[B : Ordering](f: T => B): List[T] = {
     list.sortBy(f)(implicitly[Ordering[B]])
   }
+}
+
+case class TypeConstraint[A](a: A) {
+  def getLength(implicit ev: A =:= String) = a.length
 }
 
 
